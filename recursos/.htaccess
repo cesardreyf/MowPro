@@ -1,0 +1,13 @@
+<IfModule mod_navigation.c>
+    Options -MultiViews
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /recursos
+
+    Rewritecond %{REQUEST_FILENAME} !-d
+    Rewritecond %{REQUEST_FILENAME} !-f
+
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
