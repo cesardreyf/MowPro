@@ -1,4 +1,8 @@
+# Vim
 *.swo
 *.swp
+
+# Logs
+registros/*.log
 
 makefile
