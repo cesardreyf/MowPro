@@ -1,8 +1,10 @@
 <?php
 
-    include 'app/nucleo/Aplicacion/Aplicacion.php';
+    // Configuracion
+    require 'config.php';
 
-    $aplicacion = new App\Aplicacion();
-    $aplicacion->ejecutar();
+    // Inicializa Mow
+    require $mow_carpeta_principal . '/Gestor/Autoload/Autoload.php';
+    new Mow\Gestor\Autoload\Autoload();
 
 ?>
