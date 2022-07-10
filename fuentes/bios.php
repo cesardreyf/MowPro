@@ -12,4 +12,9 @@
     $gImprimirErrores = new Mow\Datos\Sistema\Errores\Imprimir\ImprimirTexto();
     $gError = new Mow\Gestor\Sistema\Errores\Errores($gGuardarErrores, $gImprimirErrores);
 
+    // Instancia el gestor de excepciones
+    $gGuardarExcepciones = new Mow\Datos\Sistema\Excepciones\Guardar\GuardarTexto(new Mow\Datos\Archivos\Archivo($gestor_excepciones_archivo));
+    $gImprimirExcepciones = new Mow\Datos\Sistema\Excepciones\Imprimir\ImprimirTexto();
+    $gExcepciones = new Mow\Gestor\Sistema\Excepciones\Excepciones($gGuardarExcepciones, $gImprimirExcepciones);
+
 ?>

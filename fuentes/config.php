@@ -11,4 +11,7 @@
     // Gestor Errores
     $gestor_errores_archivo = $proyecto_carpeta_registros . '/errores.log';
 
+    // Gestor Excepciones
+    $gestor_excepciones_archivo = $proyecto_carpeta_registros . '/excepciones.log';
+
 ?>
