@@ -20,7 +20,7 @@
     $gExcepciones = new Mow\Gestor\Sistema\Excepciones\Excepciones($gExcepcionesConfig, $gExcepcionesGuardar, $gExcepcionesImprimir);
 
     // Instancia el invocador
-    $gInvocador = new Mow\Gestor\Invocador\Invocador(new Mow\Datos\Archivos\Carpeta($app_librerias_carpeta));
+    $gInvocador = new Mow\Gestor\Invocador\Invocador();
     $gInvocador->reservarNamespace('App', new Mow\Datos\Archivos\Carpeta($app_carpeta_principal));
 
     // Crea una memoria de solo lectura

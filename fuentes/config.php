@@ -10,7 +10,6 @@
 
     // App
     $app_carpeta_principal = $proyecto_carpeta_fuentes . '/app';
-    $app_librerias_carpeta = $app_carpeta_principal . '/librerias';
 
     // Gestor Errores
     $gestor_errores_archivo = $proyecto_carpeta_registros . '/errores.log';
