@@ -23,4 +23,17 @@
     $gInvocador = new Mow\Gestor\Invocador\Invocador(new Mow\Datos\Archivos\Carpeta($app_librerias_carpeta));
     $gInvocador->reservarNamespace('App', new Mow\Datos\Archivos\Carpeta($app_carpeta_principal));
 
+    // Crea una memoria de solo lectura
+    $memoria_principal = new Mow\Datos\Memoria\MemoriaSoloLectura(
+        'memoria_principal',
+        array(
+            'gestor_errores'     => &$gErrores,
+            'gestor_excepciones' => &$gExcepciones,
+            'gestor_invocador'   => &$gInvocador
+        )
+    );
+
+    // Cede el poder a la aplicación
+    new App\Iniciar($memoria_principal);
+
 ?>
