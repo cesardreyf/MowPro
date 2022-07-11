@@ -8,10 +8,22 @@
     // Mow
     $mow_carpeta_principal = '../../mow';
 
+    // App
+    $app_carpeta_principal = $proyecto_carpeta_fuentes . '/app';
+    $app_librerias_carpeta = $app_carpeta_principal . '/librerias';
+
     // Gestor Errores
     $gestor_errores_archivo = $proyecto_carpeta_registros . '/errores.log';
+    $gestor_errores_config_array = array(
+        'guardar' => true,
+        'imprimir' => true
+    );
 
     // Gestor Excepciones
     $gestor_excepciones_archivo = $proyecto_carpeta_registros . '/excepciones.log';
+    $gestor_excepciones_config_array = array(
+        'guardar' => true,
+        'imprimir' => true
+    );
 
 ?>
