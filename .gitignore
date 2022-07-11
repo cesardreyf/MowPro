@@ -5,4 +5,7 @@
 # Logs
 registros/*.log
 
+# Documentacion Personal
+documentos/*
+
 makefile
