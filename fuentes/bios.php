@@ -27,13 +27,15 @@
     $memoria_principal = new Mow\Datos\Memoria\MemoriaSoloLectura(
         'memoria_principal',
         array(
-            'gestor_errores'     => &$gErrores,
-            'gestor_excepciones' => &$gExcepciones,
-            'gestor_invocador'   => &$gInvocador
+            'gestor_errores'        => &$gErrores,
+            'gestor_excepciones'    => &$gExcepciones,
+            'gestor_invocador'      => &$gInvocador,
+            'app_carpeta_principal' => &$app_carpeta_principal
         )
     );
 
     // Cede el poder a la aplicación
-    new App\Iniciar($memoria_principal);
+    $aplicacion = new App\Iniciar($memoria_principal);
+    $aplicacion->ejecutar();
 
 ?>
