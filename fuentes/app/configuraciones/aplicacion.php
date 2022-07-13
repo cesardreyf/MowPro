@@ -11,5 +11,3 @@ return array(
     'controlador_error404' => 'e404'
 
 );
-
-?>

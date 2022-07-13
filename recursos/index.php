@@ -5,5 +5,3 @@
     // ini_set('display_errors', '1');
 
     include '../fuentes/bios.php';
-
-?>

@@ -37,5 +37,3 @@
     // Cede el poder a la aplicación
     $aplicacion = new App\Iniciar($memoria_principal);
     $aplicacion->ejecutar();
-
-?>

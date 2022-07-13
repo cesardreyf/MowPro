@@ -14,5 +14,3 @@ class Index extends IControlador
     }
 
 }
-
-?>

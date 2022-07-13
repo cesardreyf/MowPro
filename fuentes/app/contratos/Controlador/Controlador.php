@@ -15,5 +15,3 @@ interface Controlador
     public function finalizar();
     public function renderizar();
 }
-
-?>

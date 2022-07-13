@@ -4,6 +4,7 @@ namespace Interfaz\Controlador;
 
 use Contrato\Controlador\Controlador;
 use Nucleo\Criterio;
+use MowVis\Render\Render;
 
 abstract class IControlador implements Controlador
 {
@@ -53,5 +54,3 @@ abstract class IControlador implements Controlador
     }
 
 }
-
-?>

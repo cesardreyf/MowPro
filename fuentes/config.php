@@ -24,5 +24,3 @@
         'guardar' => true,
         'imprimir' => true
     );
-
-?>

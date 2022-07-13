@@ -14,5 +14,3 @@ class E404 extends IControlador
     }
 
 }
-
-?>
