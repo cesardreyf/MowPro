@@ -8,6 +8,7 @@ use Mow\Datos\Memoria\Cargar\Desde\Archivo\MemoriaSoloLectura;
 use Mow\Gestor\Enrutador\Manual\EnrutadorManual as Enrutador;
 use Mow\Gestor\Url\Amigable\UrlAmigable;
 use Mow\Interfaz\Memoria\MemoriaSoloLectura as MSL;
+use Nucleo\EjecutarControlador;
 
 class Iniciar
 {
@@ -24,7 +25,10 @@ class Iniciar
         $paginasCfg = new MemoriaSoloLectura(new Archivo($configCarpetaPrincipal . '/paginas.php'));
 
         $gInvocador->reservarNamespace('Controlador', new Carpeta($appCarpeta . '/controladores'));
+        $gInvocador->reservarNamespace('Interfaz', new Carpeta($appCarpeta . '/interfaces'));
+        $gInvocador->reservarNamespace('Contrato', new Carpeta($appCarpeta . '/contratos'));
         $gInvocador->reservarNamespace('Modelo', new Carpeta($appCarpeta . '/modelos'));
+        $gInvocador->reservarNamespace('Nucleo', new Carpeta($appCarpeta . '/nucleo'));
         $gInvocador->reservarNamespace('', new Carpeta($appCarpeta . '/librerias'));
 
         $peticion = new UrlAmigable($appConfig);
@@ -37,7 +41,9 @@ class Iniciar
     public function ejecutar()
     {
         // Invoca al controlador
-        $this->gInvocador->invocar('Controlador\\' . $this->controlador);
+        new EjecutarControlador(
+            $this->gInvocador->invocar('Controlador\\' . $this->controlador)
+        );
     }
 
 }

@@ -2,13 +2,15 @@
 
 namespace Controlador;
 
-class Index
+use Interfaz\Controlador\IControlador;
+
+class Index extends IControlador
 {
 
-    public function __construct()
+    public function indice(): int
     {
-        // Temporal
         echo 'Hola mundo';
+        return self::EXITO;
     }
 
 }
